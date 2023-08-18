@@ -16,12 +16,6 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "allowedCommonJsDependencies": [
-            "bip39",
-            "crypto-js",
-            "ethereumjs-wallet",
-            "web3"
-          ],  
           "options": {
             "outputPath": "dist/dapp",
             "index": "src/index.html",

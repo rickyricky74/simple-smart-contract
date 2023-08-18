@@ -22,14 +22,7 @@
     "lib": [
       "ES2022",
       "dom"
-    ],
-    "paths": {
-      "crypto": [ "./node_modules/crypto-browserify" ],
-      "stream": [ "./node_modules/stream-browserify" ],
-      "http": [ "./node_modules/stream-http"],
-      "https": [ "./node_modules/https-browserify" ],
-      "os": [ "./node_modules/os-browserify" ],
-    }
+    ]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
