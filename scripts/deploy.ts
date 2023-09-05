@@ -5,12 +5,12 @@ async function main() {
   const someToken = await ethers.deployContract("SomeToken", [ethers.parseEther("1000000000")]);
   await someToken.waitForDeployment();
 
-  console.log(`SomeToken deployed to ${someToken.address}`);
+  console.log(`SomeToken deployed to ${await someToken.getAddress()}`);
 
   const payMachine = await ethers.deployContract("PayMachine");
   await payMachine.waitForDeployment();
 
-  console.log(`PayMachine deployed to ${payMachine.address}`);
+  console.log(`PayMachine deployed to ${await payMachine.getAddress()}`);
 
 }
 
