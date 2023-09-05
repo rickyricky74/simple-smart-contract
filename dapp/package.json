@@ -2,27 +2,32 @@
   "name": "dapp",
   "version": "0.0.0",
   "scripts": {
+    "gen-abi": "mv -f src/abi/contracts/**/*.dbg.json src/abi/debug/ 2>/dev/null || : && typechain --target=ethers-v5 ./src/abi/contracts/**/*.json --out-dir=./src/app/models/abi",
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
+    "start": "npm run gen-abi && ng serve",
+    "build": "npm run gen-abi && ng build",
+    "watch": "npm run gen-abi && ng build --watch --configuration development",
     "test": "ng test"
   },
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.1.0",
+    "@angular/cdk": "^15.2.9",
     "@angular/common": "^15.1.0",
     "@angular/compiler": "^15.1.0",
     "@angular/core": "^15.1.0",
     "@angular/forms": "^15.1.0",
+    "@angular/material": "^15.2.9",
     "@angular/platform-browser": "^15.1.0",
     "@angular/platform-browser-dynamic": "^15.1.0",
     "@angular/router": "^15.1.0",
-    "bip39": "^3.1.0",
-    "crypto-js": "^4.1.1",
-    "ethereumjs-wallet": "^1.0.2",
+    "@ngrx/effects": "^15.4.0",
+    "@ngrx/store": "^15.4.0",
+    "@typechain/ethers-v5": "^11.1.1",
+    "ethers": "^5.7.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "typechain": "^8.3.1",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -30,18 +35,12 @@
     "@angular/cli": "~15.1.6",
     "@angular/compiler-cli": "^15.1.0",
     "@types/jasmine": "~4.3.0",
-    "crypto-browserify": "^3.12.0",
-    "https-browserify": "^1.0.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
-    "os-browserify": "^0.3.0",
-    "stream-browserify": "^3.0.0",
-    "stream-http": "^3.2.0",
-    "typescript": "~4.9.4",
-    "url": "^0.11.1"
+    "typescript": "~4.9.4"
   }
 }
