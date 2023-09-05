@@ -13,6 +13,7 @@ The PayMachine smart contract is a simple smart contract that contains two funct
 
 #### Record of Deployment
 The record of deployment can be found in Linea's Testnet Etherscan here:
+
 https://goerli.lineascan.build//address/0x18f96F834328d7Da797fBa05eBf86303eba6D29e
 
 #### Smart Contract Address
@@ -38,6 +39,7 @@ This is a simple ERC20 token smart contract deriving from OpenZeppelin's impleme
 
 #### Record of Deployment
 The record of deployment can be found in Linea's Testnet Etherscan here:
+
 https://goerli.lineascan.build//address/0x18f96F834328d7Da797fBa05eBf86303eba6D29e
 
 #### Smart Contract Address
@@ -51,22 +53,22 @@ https://goerli.lineascan.build/token/0x7eecb2cde57e098e8936bb315c5368cbe0660d8d
 
 ## The Decentralized Application (Dapp)
 
-In order to demonstrate the use of the PayMachine smart contract and its associated SMTKN token, the PayMachine Demo Dapp was created as a UI that executes ETH and token transfers using the PayMachine smart contract above. 
+In order to demonstrate the use of the PayMachine smart contract and its associated `SMTKN` token, the PayMachine Demo Dapp was created as a UI that executes ETH and token transfers using the PayMachine smart contract above. 
 
 ### Requirements
 
 * This Dapp has only been tested with Metamask so if you want to try it you should have the Metamask extension installed and connected to the Linea Testnet using the network details below. 
 
   **ChainId**: 59140\
-  **RPC URL**: https://rpc.goerli.linea.build\
+  **RPC URL**: https://rpc.goerli.linea.build \
   **Currency Symbol**: ETH\
   **Block explorer URL**: https://goerli.lineascan.build/
 
-* You will need an address with a little bit of ETH in it to execute a transfer of ETH. About $5.00 USD worth of ETH should be enough. 
+* You will need an address with a little bit of `LineaETH` in it to execute a transfer of ETH. See the **Usage** instructions below.
   
 * You will need a recipient address to send ETH to
 
-* In order to send ```SMTKN``` you will need to use an address that contains some ```SMTKN``` and a recipient address to send some to. Since ```SMTKN``` is not a real token, it isn't exchanged anywhere, and there is no faucet for it, an account with its private key is provided below. You are free to add it to Metamask and transfer some ```SMTKN``` to a recipient address of your choice to test. 
+* In order to send ```SMTKN``` you will need to use an address that contains some ```SMTKN``` and a recipient address to receive it. Since ```SMTKN``` is not a real token, it isn't exchanged anywhere, and there is no faucet for it, an account with its private key is provided below. You are free to add it to Metamask and transfer some ```SMTKN``` to a recipient address of your choice to test. 
 
   **Test Acct:**` 0x13caaf6bBdE3651b40447B461A42B9F60c5E8b11`\
   **Test PKey:**`  c3f31d6d889c98fa14cb88b5ef07d83c5b6609da6acf515fe8a7f4cba2e3378f`
@@ -75,7 +77,7 @@ In order to demonstrate the use of the PayMachine smart contract and its associa
 
   * Don't transfer the whole amount. One ```SMTKN``` or two is enough to give it a go and leave some for others to test.
 
-  * Don't use this account for anything meaningful. The private key is shared here for the world to see and use. 
+  * Don't use this account for anything meaningful. The private key is shared here for the world to see and use. You have been warned.
 
 ### Usage 
 
@@ -83,26 +85,26 @@ In order to demonstrate the use of the PayMachine smart contract and its associa
 
 * Select a test account. 
 
-* Click the "connect" when prompted in Metamask after selecting the account.
+* Click "connect" when prompted in Metamask after selecting the account.
 
 * If you don't have any Tesnet ETH in the account then get some using the faucet at the link below. 
 
   https://faucet.goerli.linea.build/
 
   
-* Add the test account provided above if you want to test the transfer of ```SMTKN``` tokens
+* Add the test account provided above if you want to test the transfer of `SMTKN` tokens
 
   **Note:** When switching accounts in Metamask, the dapp will automatically update about every 20 seconds. However, there is a limit to the polling so it will not update automatically if it's reached its polling limit. It is recommended to refresh the page to update the currently selected Metamask account in the Dapp. It will save you some time anyway.
 
 * Ensure the source account is displayed in the purple header at the top
 
-* Select the token you want to transfer (ETH or SMTKN)
+* Select the token you want to transfer (ETH or SMTKN) from the drop-down
 
 * Enter the amount to send
 
 * Select a recipient address from the list or enter one manually
 
-  * The list will contain any Metamask accounts that you've connected to the dapp. If you haven't connected the recipient account using Metamask, then switch to that account temporarily and connect it to get it to show up in the list. Otherwise, you will have to enter that account's public send address manually. 
+  * The list will contain any Metamask accounts that you've connected to the dapp. If you haven't connected the recipient account using Metamask, then switch to that account temporarily and connect it to get it to show up in the list. Otherwise, you will have to enter that account's public receive address manually. 
 
 * Click the "Send" button to execute the transfer
 
